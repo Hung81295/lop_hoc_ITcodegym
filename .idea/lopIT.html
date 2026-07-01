@@ -4,12 +4,59 @@
   <meta charset="UTF-8">
   <title>LỚP HỌC IT CODE GYM</title>
   <style>
+    .gui_xoa {
+      display: block;
+      margin: 0 auto;
+      align-items: center;
+    }
 
+    .ho_so {
+      background: bisque;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .anh {
+      float: right;
+      width: 400px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .danh_sach {
+      background: #1fe9b7;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      background: antiquewhite;
+      text-align: center;
+    }
+
+    thead {
+      background: hotpink;
+    }
+
+    .form {
+      background: #49c197;
+      padding: 10px;
+      border-radius: 8px;
+    }
   </style>
 </head>
-<body>
-  <h1>LỚP HỌC IT - CODEGYM</h1>
-  <div><h2>Tôi hiện tại và tương lai</h2>
+<body style="background: #888888; border-radius: 5px; padding: 10px">
+<h1 style="text-align: center; border: 2px; background: chartreuse; display: block; padding: 10px; border-radius: 5px">
+  LỚP HỌC IT - CODEGYM</h1>
+<div class="ho_so clearfix"><h2>Tôi hiện tại và tương lai</h2>
+  <img src="img.png" alt="Lớp học codegym" class="anh">
   <p>Quyết định rời bỏ 10 năm thanh xuân tại Nhật Bản (2016 – 2026) để trở về Việt Nam lập nghiệp là một bước ngoặt đầy
     dũng cảm, thể hiện rõ khát vọng tự chủ và tư duy nhạy bén của bạn. Bản lĩnh tích lũy từ môi trường quốc tế đã giúp
     bạn nhanh chóng đón nhận vị trí đối ngoại phát triển thị trường Nhật Bản tại một công ty xuất khẩu lao động ngay khi
@@ -19,9 +66,9 @@
     trình hiện đại, năng lực ngoại ngữ chuyên sâu và sự am hiểu văn hóa bản địa sẽ biến bạn thành một kỹ sư Full Stack
     vô cùng khan hiếm, sẵn sàng chinh phục các dự án phần mềm lớn hoặc dẫn dắt các doanh nghiệp công nghệ hướng tới thị
     trường Nhật Bản.Để</p>
-  <img src="img.png" alt="Lớp học codegym"></div>
-  <div><h2>Bảng danh sách học viên</h2>
-  <table>
+</div>
+<div class="danh_sach clearfix"><h2>Bảng danh sách học viên</h2>
+  <table border="2" cellpadding="10" cellspacing="0">
     <thead>
     <tr>
       <th>STT</th>
@@ -34,8 +81,8 @@
     <tbody>
     <tr>
       <td></td>
-      <td colspan="5">Nhóm A</td>
-      </tr>
+      <td colspan="4">Nhóm A</td>
+    </tr>
     <tr>
       <td>1</td>
       <td>Nguyễn Văn A</td>
@@ -52,7 +99,7 @@
     </tr>
     <tr>
       <td></td>
-      <td colspan="5">Nhóm B</td>
+      <td colspan="4">Nhóm B</td>
     </tr>
     <tr>
       <td>3</td>
@@ -70,44 +117,48 @@
     </tr>
     </tbody>
   </table>
-  </div>
-  <div><form>
+</div>
+<div class="form clearfix">
+  <form>
 
-<h2>Form đăng ký</h2>
+    <h2>Form đăng ký</h2>
 
     <p><label for="ho_va_ten">Họ và Tên:</label><br>
-    <input type="text" id="ho_va_ten" name="ho_va_ten" placeholder="Nhập họ và tên"></p>
+      <input type="text" id="ho_va_ten" name="ho_va_ten" placeholder="Nhập họ và tên"></p>
     <p><label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" placeholder="example@domain.com"></p>
+      <input type="email" id="email" name="email" placeholder="example@domain.com"></p>
     <p>
       <label for="so_dien_thoai">Số điện thoại:</label><br>
       <input type="tel" id="so_dien_thoai" name="so_dien_thoai" placeholder="+84123456789">
     </p>
     <p>
       <label for="trinh_do">Trình độ:</label><br>
-        <select name="trinh_do" id="trinh_do">
-          <option value="">---chọn---</option>
-          <option value="intern">Intern</option>
-          <option value="Fresher">Fresher</option>
-          <option value="Junior">Junior</option>
-          <option value="Middle ">Middle</option>
-          <option value="Senior">Senior</option>
-        </select>
+      <select name="trinh_do" id="trinh_do">
+        <option value="">---chọn---</option>
+        <option value="intern">Intern</option>
+        <option value="Fresher">Fresher</option>
+        <option value="Junior">Junior</option>
+        <option value="Middle ">Middle</option>
+        <option value="Senior">Senior</option>
+      </select>
     </p>
-      <p>Kỹ Năng</p>
-    <label><input type="checkbox">HTML </label>&nbsp;
-    <label><input type="checkbox">CSS  </label>&nbsp;
-    <label><input type="checkbox">JavaScript  </label>&nbsp;
-    <label><input type="checkbox">Java </label>
-      <p>Ca học</p>
+    <p>Kỹ Năng</p>
+    <label><input type="checkbox" name="kynang" value="HTML">HTML </label>&nbsp;
+    <label><input type="checkbox" name="kynang" value="CSS">CSS </label>&nbsp;
+    <label><input type="checkbox" name="kynang" value="JavaScript">JavaScript </label>&nbsp;
+    <label><input type="checkbox" name="kynang" value="Java">Java </label>
+    <p>Ca học</p>
     <label><input type="radio" name="ca_hoc" value="sang">Sáng</label>
     <label><input type="radio" name="ca_hoc" value="chieu">Chiều</label>
     <label><input type="radio" name="ca_hoc" value="toi">Tối</label>
     <p>Lý do học:</p>
     <textarea rows="6" name="li_do" style="width: 100%" placeholder="Nhập vào đây"></textarea>
-  <input type="submit" style="background: aqua; border-radius: 5px; padding: 10px" >
-    <input type="reset" style="background: #ab287a; border-radius: 5px; padding: 10px" >
+    <input type="submit"
+           style="background: #650bab; border-radius: 5px; padding: 10px; width: 400px; text-align: center"
+           class="gui_xoa"><br>
+    <input type="reset" style="background: #f00c1f; border-radius: 5px; padding: 10px; width: 200px; text-align: center"
+           class="gui_xoa">
   </form>
-  </div>
+</div>
 </body>
 </html>
